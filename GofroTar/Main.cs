@@ -37,7 +37,14 @@ namespace GofroTar
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            OrderForm orderForm = new OrderForm();
+            orderForm.Show();
+        }
 
+        private void materialRaisedButton4_Click(object sender, EventArgs e)
+        {
+            OptimizeForm optimizeForm = new OptimizeForm();
+            optimizeForm.Show();
         }
     }
 }
