@@ -26,5 +26,15 @@ namespace GofroTar
         {
 
         }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = Optimize.DoOptimize();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
