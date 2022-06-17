@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Text;
 
 namespace GofroTar
@@ -10,6 +12,11 @@ namespace GofroTar
         {
             int[] weights = {20,20,9,9,9,9,9};
             int[] prices = {20,20,1,1,1,1,1};
+
+
+
+            Graphic graphic = new Graphic();
+            graphic.Show();
 
             int count = weights.Length;
             int maxWeight = 56;
