@@ -8,11 +8,11 @@ namespace GofroTar
     {
         public static string DoOptimize()
         {
-            int[] weights = { 3,4,5,8,9 };
-            int[] prices = { 1,6,4,7,6};
+            int[] weights = {20,20,9,9,9,9,9};
+            int[] prices = {20,20,1,1,1,1,1};
 
             int count = weights.Length;
-            int maxWeight = 13;
+            int maxWeight = 56;
 
             int[][] A;
             A = new int[count + 1][];
@@ -32,7 +32,7 @@ namespace GofroTar
                     {
                         if (s >= weights[k - 1])
                         {
-                            A[k][s] = Math.Max(A[k-1][s],A[k-1][s]+prices[k-1]);
+                            A[k][s] = Math.Max(A[k-1][s],A[k-1][s-weights[k-1]]+prices[k-1]);
                         }
                         else
                         {
@@ -45,8 +45,12 @@ namespace GofroTar
 
             List<int> result = new List<int>();
             traceResult(A, weights, count, maxWeight, result);
-
-            return result[0].ToString()+" "+result[1].ToString();
+            string sres="";
+            foreach(int item in result)
+            {
+                sres = sres + item.ToString() + " ";
+            }
+            return sres;
 
         }
 

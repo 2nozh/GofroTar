@@ -27,7 +27,9 @@ namespace GofroTar
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            OptimizeForm optimizeForm = new OptimizeForm();
+            optimizeForm.Show();
+            this.Hide();
         }
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
