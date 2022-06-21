@@ -24,15 +24,25 @@ namespace GofroTar
 
         private void OptimizeForm_Load(object sender, EventArgs e)
         {
-            richTextBox1.Text = Optimize.DoOptimize();
+
+            
+            //richTextBox1.Text = Optimize.DoOptimize();
+            richTextBox1.Text = Optimize.DoSimplex();
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = Optimize.DoOptimize();
+            //richTextBox1.Text = Optimize.DoOptimize();
+            ResultsForm res = new ResultsForm();
+            res.Show();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
         {
 
         }
