@@ -37,7 +37,7 @@ namespace GofroTar
 
         private void Graphic_Load(object sender, EventArgs e)
         {
-            plane.AddRectangle(new Rectangle(9, 9, (canvas.width + 2) * scale, (canvas.length + 2) * scale));
+                plane.AddRectangle(new Rectangle(9, 9, (canvas.width + 2) * scale, (canvas.length + 2) * scale));
             g = CreateGraphics();/*
             plane.AddRectangle(new Rectangle(9, 9, 501, 501));
 

@@ -6,123 +6,150 @@ namespace GofroTar
 {
     class Simplex
     {
-        //source - симплекс таблица без базисных переменных
-        double[,] table; //симплекс таблица
+        private double[] c;
+        private double[,] A;
+        private double[] b;
+        private HashSet<int> N = new HashSet<int>();
+        private HashSet<int> B = new HashSet<int>();
+        private double v = 0;
 
-        int m, n;
-
-        List<int> basis; //список базисных переменных
-
-        public Simplex(double[,] source)
+        public Simplex(double[] c, double[,] A, double[] b)
         {
-            m = source.GetLength(0);
-            n = source.GetLength(1);
-            table = new double[m, n + m - 1];
-            basis = new List<int>();
+            int vars = c.Length, constraints = b.Length;
 
-            for (int i = 0; i < m; i++)
+            if (vars != A.GetLength(1))
             {
-                for (int j = 0; j < table.GetLength(1); j++)
+                throw new Exception("Number of variables in c doesn't match number in A.");
+            }
+
+            if (constraints != A.GetLength(0))
+            {
+                throw new Exception("Number of constraints in A doesn't match number in b.");
+            }
+
+            // Extend max fn coefficients vector with 0 padding
+            this.c = new double[vars + constraints];
+            Array.Copy(c, this.c, vars);
+
+            // Extend coefficient matrix with 0 padding
+            this.A = new double[vars + constraints, vars + constraints];
+            for (int i = 0; i < constraints; i++)
+            {
+                for (int j = 0; j < vars; j++)
                 {
-                    if (j < n)
-                        table[i, j] = source[i, j];
-                    else
-                        table[i, j] = 0;
-                }
-                //выставляем коэффициент 1 перед базисной переменной в строке
-                if ((n + i) < table.GetLength(1))
-                {
-                    table[i, n + i] = 1;
-                    basis.Add(n + i);
+                    this.A[i + vars, j] = A[i, j];
                 }
             }
 
-            n = table.GetLength(1);
-        }
+            // Extend constraint right-hand side vector with 0 padding
+            this.b = new double[vars + constraints];
+            Array.Copy(b, 0, this.b, vars, constraints);
 
-        //result - в этот массив будут записаны полученные значения X
-        public double[,] Calculate(double[] result)
-        {
-            int mainCol, mainRow; //ведущие столбец и строка
-
-            while (!IsItEnd())
+            // Populate non-basic and basic sets
+            for (int i = 0; i < vars; i++)
             {
-                mainCol = findMainCol();
-                mainRow = findMainRow(mainCol);
-                basis[mainRow] = mainCol;
-
-                double[,] new_table = new double[m, n];
-
-                for (int j = 0; j < n; j++)
-                    new_table[mainRow, j] = table[mainRow, j] / table[mainRow, mainCol];
-
-                for (int i = 0; i < m; i++)
-                {
-                    if (i == mainRow)
-                        continue;
-
-                    for (int j = 0; j < n; j++)
-                        new_table[i, j] = table[i, j] - table[i, mainCol] * new_table[mainRow, j];
-                }
-                table = new_table;
+                N.Add(i);
             }
 
-            //заносим в result найденные значения X
-            for (int i = 0; i < result.Length; i++)
+            for (int i = 0; i < constraints; i++)
             {
-                int k = basis.IndexOf(i + 1);
-                if (k != -1)
-                    result[i] = table[k, 0];
-                else
-                    result[i] = 0;
+                B.Add(vars + i);
             }
-
-            return table;
         }
 
-        private bool IsItEnd()
+        public Tuple<double, double[]> Minimize()
         {
-            bool flag = true;
-
-            for (int j = 1; j < n; j++)
+            while (true)
             {
-                if (table[m - 1, j] < 0)
+                // Find highest coefficient for entering var
+                int e = -1;
+                double ce = 0;
+                foreach (var _e in N)
                 {
-                    flag = false;
-                    break;
-                }
-            }
-
-            return flag;
-        }
-
-        private int findMainCol()
-        {
-            int mainCol = 1;
-
-            for (int j = 2; j < n; j++)
-                if (table[m - 1, j] < table[m - 1, mainCol])
-                    mainCol = j;
-
-            return mainCol;
-        }
-
-        private int findMainRow(int mainCol)
-        {
-            int mainRow = 0;
-
-            for (int i = 0; i < m - 1; i++)
-                if (table[i, mainCol] > 0)
-                {
-                    mainRow = i;
-                    break;
+                    if (c[_e] > ce)
+                    {
+                        ce = c[_e];
+                        e = _e;
+                    }
                 }
 
-            for (int i = mainRow + 1; i < m - 1; i++)
-                if ((table[i, mainCol] > 0) && ((table[i, 0] / table[i, mainCol]) < (table[mainRow, 0] / table[mainRow, mainCol])))
-                    mainRow = i;
+                // If no coefficient > 0, there's no more maximizing to do, and we're almost done
+                if (e == -1) break;
 
-            return mainRow;
+                // Find lowest check ratio
+                double minRatio = double.PositiveInfinity;
+                int l = -1;
+                foreach (var i in B)
+                {
+                    if (A[i, e] > 0)
+                    {
+                        double r = b[i] / A[i, e];
+                        if (r < minRatio)
+                        {
+                            minRatio = r;
+                            l = i;
+                        }
+                    }
+                }
+
+                // Unbounded
+                if (double.IsInfinity(minRatio))
+                {
+                    return Tuple.Create<double, double[]>(double.PositiveInfinity, null);
+                }
+
+                pivot(e, l);
+            }
+
+            // Extract amounts and slack for optimal solution
+            double[] x = new double[b.Length];
+            int n = b.Length;
+            for (var i = 0; i < n; i++)
+            {
+                x[i] = B.Contains(i) ? b[i] : 0;
+            }
+
+            // Return max and variables
+            return Tuple.Create<double, double[]>(v, x);
+        }
+
+        private void pivot(int e, int l)
+        {
+            N.Remove(e);
+            B.Remove(l);
+
+            b[e] = b[l] / A[l, e];
+
+            foreach (var j in N)
+            {
+                A[e, j] = A[l, j] / A[l, e];
+            }
+
+            A[e, l] = 1 / A[l, e];
+
+            foreach (var i in B)
+            {
+                b[i] = b[i] - A[i, e] * b[e];
+
+                foreach (var j in N)
+                {
+                    A[i, j] = A[i, j] - A[i, e] * A[e, j];
+                }
+
+                A[i, l] = -1 * A[i, e] * A[e, l];
+            }
+
+            v = v + c[e] * b[e];
+
+            foreach (var j in N)
+            {
+                c[j] = c[j] - c[e] * A[e, j];
+            }
+
+            c[l] = -1 * c[e] * A[e, l];
+
+            N.Add(l);
+            B.Add(e);
         }
     }
 }
