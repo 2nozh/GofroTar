@@ -23,7 +23,7 @@ namespace GofroTar
             Canvas canvas = new Canvas();
             for(int i = 0; i < pr.cuts.Count; i++)
                 {
-                    dataGridView2.Rows.Add(pr.cuts[i].number, pr.count[i], "machine1", canvas.width);
+                    dataGridView2.Rows.Add(pr.cuts[i].number,Math.Round(pr.count[i]), "machine1", canvas.width);
                 }
         }
     }
