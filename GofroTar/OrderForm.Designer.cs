@@ -237,7 +237,7 @@ namespace GofroTar
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(293, 27);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "234";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // materialLabel2
             // 
@@ -340,7 +340,7 @@ namespace GofroTar
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 4);
@@ -348,7 +348,6 @@ namespace GofroTar
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 315F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(416, 315);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
@@ -359,7 +358,7 @@ namespace GofroTar
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.numericUpDown1, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(373, 4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(349, 4);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 4;
@@ -367,7 +366,7 @@ namespace GofroTar
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(40, 307);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(64, 307);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // label1
@@ -376,7 +375,7 @@ namespace GofroTar
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 76);
+            this.label1.Size = new System.Drawing.Size(58, 76);
             this.label1.TabIndex = 0;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -385,7 +384,7 @@ namespace GofroTar
             this.numericUpDown1.Location = new System.Drawing.Point(3, 4);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(32, 27);
+            this.numericUpDown1.Size = new System.Drawing.Size(58, 27);
             this.numericUpDown1.TabIndex = 2;
             // 
             // pictureBox1
@@ -395,7 +394,7 @@ namespace GofroTar
             this.pictureBox1.Location = new System.Drawing.Point(3, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(364, 307);
+            this.pictureBox1.Size = new System.Drawing.Size(340, 307);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -404,7 +403,7 @@ namespace GofroTar
             // 
             this.tableLayoutPanel10.ColumnCount = 2;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.pictureBox3, 0, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(425, 4);
@@ -422,7 +421,7 @@ namespace GofroTar
             this.tableLayoutPanel11.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel11.Controls.Add(this.numericUpDown3, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(373, 4);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(349, 4);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 4;
@@ -430,7 +429,7 @@ namespace GofroTar
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(40, 307);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(64, 307);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
             // label3
@@ -439,7 +438,7 @@ namespace GofroTar
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 76);
+            this.label3.Size = new System.Drawing.Size(58, 76);
             this.label3.TabIndex = 0;
             // 
             // numericUpDown3
@@ -447,7 +446,7 @@ namespace GofroTar
             this.numericUpDown3.Location = new System.Drawing.Point(3, 4);
             this.numericUpDown3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(32, 27);
+            this.numericUpDown3.Size = new System.Drawing.Size(58, 27);
             this.numericUpDown3.TabIndex = 2;
             // 
             // pictureBox3
@@ -457,7 +456,7 @@ namespace GofroTar
             this.pictureBox3.Location = new System.Drawing.Point(3, 4);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(364, 307);
+            this.pictureBox3.Size = new System.Drawing.Size(340, 307);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;

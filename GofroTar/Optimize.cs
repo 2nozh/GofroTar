@@ -8,61 +8,39 @@ namespace GofroTar
 {
     class Optimize
     {
-        public static PlanResult DoSimplex()
+        public static PlanResult DoSimplex(List<Order> orders)
         {
-            Cut cut1 = DBConnection.cuts[0];
-            Cut cut2 = DBConnection.cuts[1];
-            Cut cut3 = DBConnection.cuts[2];
-            int order1 = 1;
-            int order2 = 21;
+            
             int maxoveruse = 5;
 
-            int extrai1 = 0;
-            int extrai2 = 0;
-            var s = new Simplex(
-        new[] { 1/cut1.looses, 1/cut2.looses, 1/cut3.looses,0,0},
-        new[,] {
-          {cut1.providesI1,cut2.providesI1,cut3.providesI1,extrai1,0},
-          {cut1.providesI2,cut2.providesI2,cut3.providesI2,0,extrai2},
-          {-cut1.providesI1,-cut2.providesI1,-cut3.providesI1,-extrai1,0},
-          {-cut1.providesI2,-cut2.providesI2,-cut3.providesI2,0,-extrai2},
-        },
-        new double[] { order1,order2,order1+maxoveruse,order2+maxoveruse}
-      );
+            double[] mainF = new double[DBConnection.cuts.Count];
+            double[,] borders = new double[4, DBConnection.cuts.Count];
+            double[] borderValues = new double[4];    
+            for (int i = 0; i < DBConnection.cuts.Count; i++)
+            {
+                mainF[i] = 1 / DBConnection.cuts[i].looses;
+                borders[0,i] = DBConnection.cuts[i].providesI1;
+                borders[1,i] = DBConnection.cuts[i].providesI2;
+                borders[2,i] = -DBConnection.cuts[i].providesI1;
+                borders[3,i] = -DBConnection.cuts[i].providesI2;
+            }
+
+            
+            borderValues[0] = orders[0].count[0];
+            borderValues[1] = orders[0].count[1];
+            borderValues[2] = orders[0].count[0] + maxoveruse;
+            borderValues[3] = orders[0].count[1] + maxoveruse;
+
+            var s = new Simplex(mainF, borders, borderValues);
 
             var answer = s.Minimize();
-
-            string results = "";
-            double[] result = new double[6];
-            result[0] = answer.Item2[0];
-            result[1] = answer.Item2[1];
-            result[2] = answer.Item2[2];
-            result[3] = answer.Item1;
-            result[4] = answer.Item2[3];
-            result[5] = answer.Item2[4];
-            results = results + "\n\nРешение\n\n";
-            results = results + "X[1] = " + result[0] + "\n";
-            results = results + "X[2] = " + result[1] + "\n";
-            results = results + "X[3] = " + result[2] + "\n";
-            results = results + "item1 = " + result[3] + "\n";
-            results = results + "extrai1 = " + result[4] + "\n";
-            results = results + "extrai2 = " + result[5] + "\n";
-            double funcValue = cut1.looses * result[0] + cut2.looses * result[1] + cut3.looses * result[2];
-            results = results + "\n\nцф=\n\n";
-            results = results + funcValue;
-
-            results = results + "\n\nпроизведено i1,i2\n\n";
-            double i1 = cut1.providesI1 * result[0] + cut2.providesI1 * result[1] + cut3.providesI1 * result[2]+ result[4];
-            double i2 = cut1.providesI2 * result[0] + cut2.providesI2 * result[1] + cut3.providesI2 * result[2]+ result[5];
-            results = results + i1 + "   " + i2;
-
+            
             PlanResult pr = new PlanResult();
-            pr.cuts.Add(cut1);
-            pr.count.Add(answer.Item2[0]);
-            pr.cuts.Add(cut2);
-            pr.count.Add(answer.Item2[1]);
-            pr.cuts.Add(cut3);
-            pr.count.Add(answer.Item2[2]);
+            for(int i=0;i< DBConnection.cuts.Count; i++)
+            {
+                pr.cuts.Add(DBConnection.cuts[i]);
+                pr.count.Add(answer.Item2[i]);
+            }    
             return pr;
         }
 

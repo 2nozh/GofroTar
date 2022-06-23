@@ -28,14 +28,36 @@ namespace GofroTar
             textBox3.Text = "";
             foreach (Order order in DBConnection.orders)
             {
-                dataGridView1.Rows.Add(true, order.number,order.boxes.Count);
+                int count=0;
+                foreach(int boxCount in order.count)
+                {
+                    count = count + boxCount;
+                }
+                dataGridView1.Rows.Add(true, order.number,count);
             }
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
             DBConnection.getPlan();
-            PlanResult pr = Optimize.DoSimplex();
+            List<Order> orders =new List<Order>();   
+            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+            {
+                if ((bool)dataGridView1[0, i].Value)
+                {
+                    foreach (Order o in DBConnection.orders)
+                    {
+                        if (o.number == dataGridView1[1, i].Value.ToString())
+                        {
+                            orders.Add(o);
+                            break;
+                        }
+                    }
+
+                } 
+            }
+
+            PlanResult pr = Optimize.DoSimplex(orders);
             ResultsForm res = new ResultsForm(pr);
             res.Show();
         }
@@ -48,6 +70,37 @@ namespace GofroTar
         private void materialLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_MouseHover(object sender, EventArgs e)
+        {
+            List<Order> orders = new List<Order>();
+            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+            {
+                if ((bool)dataGridView1[0, i].Value)
+                {
+                    foreach (Order o in DBConnection.orders)
+                    {
+                        if (o.number == dataGridView1[1, i].Value.ToString())
+                        {
+                            orders.Add(o);
+                            break;
+                        }
+                    }
+
+                }
+            }
+            textBox1.Text = orders.Count.ToString();
         }
     }
 }

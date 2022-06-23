@@ -136,6 +136,7 @@ namespace GofroTar
             this.materialTabSelector1.Size = new System.Drawing.Size(917, 40);
             this.materialTabSelector1.TabIndex = 0;
             this.materialTabSelector1.Text = "materialTabSelector1";
+            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
             // 
             // materialTabControl1
             // 
@@ -217,7 +218,8 @@ namespace GofroTar
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(293, 27);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "2";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.MouseHover += new System.EventHandler(this.textBox1_MouseHover);
             // 
             // materialLabel2
             // 
