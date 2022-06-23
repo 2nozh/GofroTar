@@ -24,16 +24,19 @@ namespace GofroTar
 
         private void OptimizeForm_Load(object sender, EventArgs e)
         {
-
-            
-            //richTextBox1.Text = Optimize.DoOptimize();
-            richTextBox1.Text = Optimize.DoSimplex();
+            textBox1.Text = DBConnection.orders.Count.ToString();
+            textBox3.Text = "";
+            foreach (Order order in DBConnection.orders)
+            {
+                dataGridView1.Rows.Add(true, order.number,order.boxes.Count);
+            }
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            //richTextBox1.Text = Optimize.DoOptimize();
-            ResultsForm res = new ResultsForm();
+            DBConnection.getPlan();
+            PlanResult pr = Optimize.DoSimplex();
+            ResultsForm res = new ResultsForm(pr);
             res.Show();
         }
 

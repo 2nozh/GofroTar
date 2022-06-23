@@ -114,14 +114,14 @@ namespace GofroTar
             this.tableLayoutPanel1.Controls.Add(this.materialTabSelector1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.materialTabControl1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 85);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 64);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 515);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 536);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // materialTabSelector1
@@ -150,7 +150,7 @@ namespace GofroTar
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(911, 400);
+            this.materialTabControl1.Size = new System.Drawing.Size(911, 421);
             this.materialTabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -160,7 +160,7 @@ namespace GofroTar
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(903, 367);
+            this.tabPage1.Size = new System.Drawing.Size(903, 388);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "общая информация";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@ namespace GofroTar
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(897, 359);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(897, 380);
             this.tableLayoutPanel3.TabIndex = 5;
             // 
             // materialLabel1
@@ -199,11 +199,11 @@ namespace GofroTar
             this.materialLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(3, 51);
+            this.materialLabel1.Location = new System.Drawing.Point(3, 54);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialLabel1.Size = new System.Drawing.Size(293, 51);
+            this.materialLabel1.Size = new System.Drawing.Size(293, 54);
             this.materialLabel1.TabIndex = 1;
             this.materialLabel1.Text = "заказов задействовано";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -212,7 +212,7 @@ namespace GofroTar
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(302, 55);
+            this.textBox1.Location = new System.Drawing.Point(302, 58);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(293, 27);
@@ -226,10 +226,10 @@ namespace GofroTar
             this.materialLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(3, 153);
+            this.materialLabel2.Location = new System.Drawing.Point(3, 162);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(293, 51);
+            this.materialLabel2.Size = new System.Drawing.Size(293, 54);
             this.materialLabel2.TabIndex = 4;
             this.materialLabel2.Text = "создан";
             this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -241,10 +241,10 @@ namespace GofroTar
             this.materialLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(3, 255);
+            this.materialLabel3.Location = new System.Drawing.Point(3, 270);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(293, 51);
+            this.materialLabel3.Size = new System.Drawing.Size(293, 54);
             this.materialLabel3.TabIndex = 5;
             this.materialLabel3.Text = "статус";
             this.materialLabel3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -252,7 +252,7 @@ namespace GofroTar
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(302, 259);
+            this.textBox3.Location = new System.Drawing.Point(302, 274);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(293, 27);
@@ -261,7 +261,7 @@ namespace GofroTar
             // dateTimePicker1
             // 
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Location = new System.Drawing.Point(302, 157);
+            this.dateTimePicker1.Location = new System.Drawing.Point(302, 166);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(293, 27);
@@ -274,7 +274,7 @@ namespace GofroTar
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(903, 367);
+            this.tabPage2.Size = new System.Drawing.Size(903, 388);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "заказы";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -293,29 +293,31 @@ namespace GofroTar
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(897, 359);
+            this.dataGridView1.Size = new System.Drawing.Size(897, 380);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column1.HeaderText = "Задействован";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.Column1.Width = 111;
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "Номер заказа";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "Всего заготовок";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
             // 
             // tabPage3
             // 
@@ -324,7 +326,7 @@ namespace GofroTar
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage3.Size = new System.Drawing.Size(903, 367);
+            this.tabPage3.Size = new System.Drawing.Size(903, 388);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "дополнительная информация";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -335,7 +337,7 @@ namespace GofroTar
             this.richTextBox1.Location = new System.Drawing.Point(3, 4);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(897, 359);
+            this.richTextBox1.Size = new System.Drawing.Size(897, 380);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -347,7 +349,7 @@ namespace GofroTar
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage4.Size = new System.Drawing.Size(903, 367);
+            this.tabPage4.Size = new System.Drawing.Size(903, 388);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "заготовки";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -365,7 +367,7 @@ namespace GofroTar
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(897, 359);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(897, 380);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // vScrollBar1
@@ -373,7 +375,7 @@ namespace GofroTar
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vScrollBar1.Location = new System.Drawing.Point(874, 0);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(23, 359);
+            this.vScrollBar1.Size = new System.Drawing.Size(23, 380);
             this.vScrollBar1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -386,7 +388,7 @@ namespace GofroTar
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(868, 351);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(868, 372);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -653,7 +655,7 @@ namespace GofroTar
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.Controls.Add(this.materialRaisedButton1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.materialRaisedButton2, 4, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 452);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 473);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;

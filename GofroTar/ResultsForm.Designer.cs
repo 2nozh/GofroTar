@@ -111,7 +111,6 @@ namespace GofroTar
             this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -252,7 +251,7 @@ namespace GofroTar
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(65, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 23);
+            this.textBox1.Size = new System.Drawing.Size(56, 27);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "2";
             // 
@@ -291,7 +290,7 @@ namespace GofroTar
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox3.Location = new System.Drawing.Point(65, 48);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(56, 23);
+            this.textBox3.Size = new System.Drawing.Size(56, 27);
             this.textBox3.TabIndex = 7;
             // 
             // dateTimePicker1
@@ -299,7 +298,7 @@ namespace GofroTar
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Location = new System.Drawing.Point(65, 30);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(56, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(56, 27);
             this.dateTimePicker1.TabIndex = 8;
             // 
             // tabPage2
@@ -324,6 +323,7 @@ namespace GofroTar
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(786, 416);
             this.dataGridView1.TabIndex = 0;
@@ -331,17 +331,23 @@ namespace GofroTar
             // Column1
             // 
             this.Column1.HeaderText = "Задействован";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Номер заказа";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Всего заготовок";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // tabPage3
             // 
@@ -448,7 +454,7 @@ namespace GofroTar
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(28, 23);
+            this.numericUpDown1.Size = new System.Drawing.Size(28, 27);
             this.numericUpDown1.TabIndex = 2;
             // 
             // pictureBox1
@@ -506,7 +512,7 @@ namespace GofroTar
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(28, 23);
+            this.numericUpDown3.Size = new System.Drawing.Size(28, 27);
             this.numericUpDown3.TabIndex = 2;
             // 
             // pictureBox3
@@ -565,7 +571,7 @@ namespace GofroTar
             // 
             this.numericUpDown5.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(28, 23);
+            this.numericUpDown5.Size = new System.Drawing.Size(28, 27);
             this.numericUpDown5.TabIndex = 2;
             // 
             // pictureBox5
@@ -623,7 +629,7 @@ namespace GofroTar
             // 
             this.numericUpDown7.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(28, 23);
+            this.numericUpDown7.Size = new System.Drawing.Size(28, 27);
             this.numericUpDown7.TabIndex = 2;
             // 
             // pictureBox7
@@ -706,7 +712,7 @@ namespace GofroTar
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Location = new System.Drawing.Point(65, 12);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(56, 23);
+            this.textBox2.Size = new System.Drawing.Size(56, 27);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "234";
             // 
@@ -745,14 +751,14 @@ namespace GofroTar
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Location = new System.Drawing.Point(65, 30);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(56, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(56, 27);
             this.dateTimePicker2.TabIndex = 8;
             // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.Location = new System.Drawing.Point(65, 48);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(56, 23);
+            this.dateTimePicker3.Size = new System.Drawing.Size(56, 27);
             this.dateTimePicker3.TabIndex = 9;
             // 
             // tabPage6
@@ -840,7 +846,7 @@ namespace GofroTar
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(28, 23);
+            this.numericUpDown2.Size = new System.Drawing.Size(28, 27);
             this.numericUpDown2.TabIndex = 2;
             // 
             // pictureBox2
@@ -898,7 +904,7 @@ namespace GofroTar
             // 
             this.numericUpDown4.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(28, 23);
+            this.numericUpDown4.Size = new System.Drawing.Size(28, 27);
             this.numericUpDown4.TabIndex = 2;
             // 
             // pictureBox4
@@ -957,7 +963,7 @@ namespace GofroTar
             // 
             this.numericUpDown6.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(28, 23);
+            this.numericUpDown6.Size = new System.Drawing.Size(28, 27);
             this.numericUpDown6.TabIndex = 2;
             // 
             // pictureBox6
@@ -1015,7 +1021,7 @@ namespace GofroTar
             // 
             this.numericUpDown8.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(28, 23);
+            this.numericUpDown8.Size = new System.Drawing.Size(28, 27);
             this.numericUpDown8.TabIndex = 2;
             // 
             // pictureBox8
@@ -1038,15 +1044,14 @@ namespace GofroTar
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel21.Controls.Add(this.materialTabControl4, 0, 1);
             this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel32, 0, 2);
-            this.tableLayoutPanel21.Controls.Add(this.materialTabSelector2, 0, 0);
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(-1, 57);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(-1, 66);
             this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 3;
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(803, 397);
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(918, 539);
             this.tableLayoutPanel21.TabIndex = 1;
             // 
             // materialTabControl4
@@ -1054,20 +1059,22 @@ namespace GofroTar
             this.materialTabControl4.Controls.Add(this.tabPage9);
             this.materialTabControl4.Depth = 0;
             this.materialTabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialTabControl4.Location = new System.Drawing.Point(3, 33);
+            this.materialTabControl4.Location = new System.Drawing.Point(3, 44);
+            this.materialTabControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialTabControl4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl4.Name = "materialTabControl4";
             this.materialTabControl4.SelectedIndex = 0;
-            this.materialTabControl4.Size = new System.Drawing.Size(797, 311);
+            this.materialTabControl4.Size = new System.Drawing.Size(912, 424);
             this.materialTabControl4.TabIndex = 1;
             // 
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.dataGridView2);
-            this.tabPage9.Location = new System.Drawing.Point(4, 24);
+            this.tabPage9.Location = new System.Drawing.Point(4, 29);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(789, 283);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage9.Size = new System.Drawing.Size(904, 391);
             this.tabPage9.TabIndex = 2;
             this.tabPage9.Text = "результаты";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -1083,10 +1090,12 @@ namespace GofroTar
             this.Column6,
             this.Column7});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(783, 277);
+            this.dataGridView2.Size = new System.Drawing.Size(898, 383);
             this.dataGridView2.TabIndex = 0;
             // 
             // tableLayoutPanel32
@@ -1103,22 +1112,24 @@ namespace GofroTar
             this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel32.Controls.Add(this.materialRaisedButton1, 1, 0);
             this.tableLayoutPanel32.Controls.Add(this.materialRaisedButton2, 4, 0);
-            this.tableLayoutPanel32.Location = new System.Drawing.Point(3, 350);
+            this.tableLayoutPanel32.Location = new System.Drawing.Point(3, 476);
+            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel32.Name = "tableLayoutPanel32";
             this.tableLayoutPanel32.RowCount = 1;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(797, 44);
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(912, 59);
             this.tableLayoutPanel32.TabIndex = 2;
             // 
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(82, 3);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(94, 4);
+            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(233, 38);
+            this.materialRaisedButton1.Size = new System.Drawing.Size(267, 51);
             this.materialRaisedButton1.TabIndex = 0;
             this.materialRaisedButton1.Text = "сохранить";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
@@ -1127,54 +1138,51 @@ namespace GofroTar
             // 
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(479, 3);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(549, 4);
+            this.materialRaisedButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(233, 38);
+            this.materialRaisedButton2.Size = new System.Drawing.Size(267, 51);
             this.materialRaisedButton2.TabIndex = 1;
             this.materialRaisedButton2.Text = "отмена";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             // 
-            // materialTabSelector2
-            // 
-            this.materialTabSelector2.BaseTabControl = null;
-            this.materialTabSelector2.Depth = 0;
-            this.materialTabSelector2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialTabSelector2.Location = new System.Drawing.Point(0, 0);
-            this.materialTabSelector2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector2.Name = "materialTabSelector2";
-            this.materialTabSelector2.Size = new System.Drawing.Size(803, 30);
-            this.materialTabSelector2.TabIndex = 3;
-            this.materialTabSelector2.Text = "materialTabSelector2";
-            // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "раскрой";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.HeaderText = "количество";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column6.HeaderText = "оборудование";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column7.HeaderText = "гофрополотно";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             // 
             // ResultsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.tableLayoutPanel21);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ResultsForm";
             this.Text = "Результаты";
             this.Load += new System.EventHandler(this.ResultsForm_Load);
@@ -1325,7 +1333,6 @@ namespace GofroTar
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private MaterialSkin.Controls.MaterialTabSelector materialTabSelector2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;

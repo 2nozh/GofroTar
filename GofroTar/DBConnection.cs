@@ -7,15 +7,8 @@ namespace GofroTar
     public static class DBConnection
     {
         public static List<Order> orders = new List<Order>();
-        public static Cut cut1 = new Cut(1, 26, 2, 0);
-        public static Cut cut2 = new Cut(2, 4, 1, 2);
-        public static Cut cut3 = new Cut(3, 14, 0, 3);
-        public static int order1 = 1;
-        public static int order2 = 21;
-        public static int maxoveruse = 5;
-
-        public static int extrai1 = 0;
-        public static int extrai2 = 0;
+        public static List<Cut> cuts = new List<Cut>();
+        
 
         public static void AddOrder(string number,DateTime dateStart, DateTime dateEnd)
         {
@@ -40,6 +33,16 @@ namespace GofroTar
             }
             order.boxes = boxes;
             order.count = count;
+        }
+
+        public static void getPlan()
+        {
+            cuts.Add(new Cut(1, 26, 2, 0));
+            cuts.Add(new Cut(2, 4, 1, 2));
+            cuts.Add(new Cut(3, 14, 0, 3));
+ int order1 = 1;
+ int order2 = 21;
+ int maxoveruse = 5;
         }
     }
 }

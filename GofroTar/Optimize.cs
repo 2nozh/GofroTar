@@ -8,11 +8,11 @@ namespace GofroTar
 {
     class Optimize
     {
-        public static string DoSimplex()
+        public static PlanResult DoSimplex()
         {
-            Cut cut1 = new Cut(1, 26, 2, 0);
-            Cut cut2 = new Cut(2, 4, 1, 2);
-            Cut cut3 = new Cut(3, 14, 0, 3);
+            Cut cut1 = DBConnection.cuts[0];
+            Cut cut2 = DBConnection.cuts[1];
+            Cut cut3 = DBConnection.cuts[2];
             int order1 = 1;
             int order2 = 21;
             int maxoveruse = 5;
@@ -56,48 +56,14 @@ namespace GofroTar
             double i2 = cut1.providesI2 * result[0] + cut2.providesI2 * result[1] + cut3.providesI2 * result[2]+ result[5];
             results = results + i1 + "   " + i2;
 
-
-            /*double[,] table = { {-10,-2,-1,0},
-                                {20,2,1,0},
-                                {-5,0,-2,-3},
-                                { 15,0,2,3},
-                                { 0,-26,-4,-14} };
-            double[,] table = { {10,2,1,0,0,0},
-                                {-20,-2,-1,0,0,0},
-                                {5,0,2,3,0,0},
-                                {-15,0,-2,-3,0,0},
-                                { 0,26,4,14,0,0} };
-            double[,] table = { {-order1,-cut1.providesI1,-cut2.providesI1,-cut3.providesI1},
-                                {-order2,-cut1.providesI2,-cut2.providesI2,-cut3.providesI2},
-                                {0,cut1.looses,cut2.looses,cut3.looses} };
-
-            double[] result = new double[4];
-            double[,] table_result;
-            Simplex S = new Simplex(table);
-            table_result = S.Calculate(result);
-            results = results + "\nРешенная симплекс-таблица:\n";
-            for (int i = 0; i < table_result.GetLength(0); i++)
-            {
-                for (int j = 0; j < table_result.GetLength(1); j++)
-                {
-                    results = results + table_result[i, j]+ " ";
-                }
-                results = results + "\n";
-            }
-            results = results + "\n\nРешение\n\n";
-            results = results + "X[1] = " + result[0]+"\n";
-            results = results + "X[2] = " + result[1] + "\n";
-            results = results + "X[3] = " + result[2] + "\n";
-            results = results + "X[4] = " + result[3] + "\n";
-            double funcValue = cut1.looses * result[0] + cut2.looses * result[1] + cut3.looses * result[2];
-            results = results + "\n\nцф=\n\n";
-            results = results + funcValue;
-
-            results = results + "\n\nпроизведено i1,i2\n\n";
-            double i1 = cut1.providesI1 * result[0] + cut2.providesI1 * result[1] + cut3.providesI1 * result[2];
-            double i2 = cut1.providesI2 * result[0] + cut2.providesI2 * result[1] + cut3.providesI2 * result[2];
-            results = results + i1 + "   "+i2;*/
-            return results;
+            PlanResult pr = new PlanResult();
+            pr.cuts.Add(cut1);
+            pr.count.Add(answer.Item2[0]);
+            pr.cuts.Add(cut2);
+            pr.count.Add(answer.Item2[1]);
+            pr.cuts.Add(cut3);
+            pr.count.Add(answer.Item2[2]);
+            return pr;
         }
 
 

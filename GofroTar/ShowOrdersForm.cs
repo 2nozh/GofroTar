@@ -24,8 +24,6 @@ namespace GofroTar
 
         private void ShowOrdersForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("12", DateTime.Now, DateTime.Now, "dkhg\ndjndfjl\n");
-            dataGridView1.Rows.Add("13", DateTime.Now, DateTime.Now, "dkhg\ndjndfjl\n");
             foreach(Order order in DBConnection.orders)
             {
                 string content = "";
