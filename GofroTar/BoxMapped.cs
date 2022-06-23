@@ -8,6 +8,7 @@ namespace GofroTar
     {
         public int width;
         public int length;
+        public string name;
 
         public BoxMapped()
         {
@@ -18,6 +19,11 @@ namespace GofroTar
         {
             this.width = width;
             this.length = length;
+
+        }
+        public BoxMapped(string name)
+        {
+            this.name = name;
         }
     }
 }

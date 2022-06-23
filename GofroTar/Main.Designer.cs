@@ -52,7 +52,8 @@ namespace GofroTar
             this.tableLayoutPanel1.Controls.Add(this.materialRaisedButton2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.materialRaisedButton3, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.materialRaisedButton4, 1, 7);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 88);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -64,7 +65,7 @@ namespace GofroTar
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 384);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(914, 512);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // materialRaisedButton1
@@ -75,11 +76,12 @@ namespace GofroTar
             this.materialRaisedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
             this.materialRaisedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialRaisedButton1.ForeColor = System.Drawing.Color.White;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(269, 45);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(307, 60);
+            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(260, 36);
+            this.materialRaisedButton1.Size = new System.Drawing.Size(298, 48);
             this.materialRaisedButton1.TabIndex = 4;
             this.materialRaisedButton1.Text = "ввести новый заказ";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
@@ -89,24 +91,27 @@ namespace GofroTar
             // 
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(269, 129);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(307, 172);
+            this.materialRaisedButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(260, 36);
+            this.materialRaisedButton2.Size = new System.Drawing.Size(298, 48);
             this.materialRaisedButton2.TabIndex = 5;
             this.materialRaisedButton2.Text = "просмотр заказов";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
             // materialRaisedButton3
             // 
             this.materialRaisedButton3.Depth = 0;
             this.materialRaisedButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(269, 213);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(307, 284);
+            this.materialRaisedButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(260, 36);
+            this.materialRaisedButton3.Size = new System.Drawing.Size(298, 48);
             this.materialRaisedButton3.TabIndex = 6;
             this.materialRaisedButton3.Text = "оборудование";
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
@@ -115,11 +120,12 @@ namespace GofroTar
             // 
             this.materialRaisedButton4.Depth = 0;
             this.materialRaisedButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(269, 297);
+            this.materialRaisedButton4.Location = new System.Drawing.Point(307, 396);
+            this.materialRaisedButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton4.Name = "materialRaisedButton4";
             this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(260, 36);
+            this.materialRaisedButton4.Size = new System.Drawing.Size(298, 48);
             this.materialRaisedButton4.TabIndex = 7;
             this.materialRaisedButton4.Text = "составить план работы";
             this.materialRaisedButton4.UseVisualStyleBackColor = true;
@@ -127,10 +133,11 @@ namespace GofroTar
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Form1_Load);

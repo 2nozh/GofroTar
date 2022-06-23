@@ -48,5 +48,11 @@ namespace GofroTar
             OptimizeForm optimizeForm = new OptimizeForm();
             optimizeForm.Show();
         }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            ShowOrdersForm show = new ShowOrdersForm();
+            show.Show();
+        }
     }
 }

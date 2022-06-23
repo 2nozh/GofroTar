@@ -41,5 +41,31 @@ namespace GofroTar
         {
 
         }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            DBConnection.AddOrder(textBox1.Text, Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(dateTimePicker2.Text));
+            List<BoxMapped> boxes = new List<BoxMapped>();
+            List<int> count = new List<int>();
+            boxes.Add(new BoxMapped("f1"));
+            count.Add(((int)numericUpDown1.Value));
+            boxes.Add(new BoxMapped("f2"));
+            count.Add(((int)numericUpDown3.Value));
+            boxes.Add(new BoxMapped("f3"));
+            count.Add(((int)numericUpDown5.Value));
+
+            DBConnection.fillOrder(textBox1.Text, boxes,count);
+            MessageBox.Show("Успешно","Уведомление",MessageBoxButtons.OK);
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            flowLayoutPanel1.Controls.Add(vScrollBar1);
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
