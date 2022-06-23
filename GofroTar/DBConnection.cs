@@ -40,9 +40,6 @@ namespace GofroTar
             cuts.Add(new Cut(1, 26, 2, 0));
             cuts.Add(new Cut(2, 4, 1, 2));
             cuts.Add(new Cut(3, 14, 0, 3));
- int order1 = 1;
- int order2 = 21;
- int maxoveruse = 5;
         }
     }
 }

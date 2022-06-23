@@ -21,15 +21,10 @@ namespace GofroTar
         private void ResultsForm_Load(object sender, EventArgs e)
         {
             Canvas canvas = new Canvas();
-            foreach (Order order in DBConnection.orders)
-            {
-
-                for(int i = 0; i < pr.cuts.Count; i++)
+            for(int i = 0; i < pr.cuts.Count; i++)
                 {
                     dataGridView2.Rows.Add(pr.cuts[i].number, pr.count[i], "machine1", canvas.width);
                 }
-                
-            }
         }
     }
 }
